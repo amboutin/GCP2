@@ -1,4 +1,5 @@
 from flask import Flask
+from datetime import datetime
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
@@ -9,7 +10,9 @@ app.config['DEBUG'] = True
 @app.route('/')
 def hello():
     """Return a friendly HTTP greeting."""
-    return 'Hello World!'
+    date_object = datetime.now()
+	current_time = date_object.strftime('%H:%M:%S')
+	return current_time
 
 
 @app.errorhandler(404)
