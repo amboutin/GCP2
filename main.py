@@ -11,8 +11,8 @@ app.config['DEBUG'] = True
 def hello():
     """Return a friendly HTTP greeting."""
     date_object = datetime.now()
-	current_time = date_object.strftime('%H:%M:%S')
-	return current_time
+    current_time = date_object.strftime('%H:%M:%S')
+    return current_time
 
 
 @app.errorhandler(404)
